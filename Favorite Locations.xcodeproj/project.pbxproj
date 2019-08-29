@@ -8,13 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		2382EA8E2318370C006C682D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2382EA8D2318370C006C682D /* AppDelegate.swift */; };
-		2382EA902318370C006C682D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2382EA8F2318370C006C682D /* ViewController.swift */; };
+		2382EA902318370C006C682D /* LandingScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2382EA8F2318370C006C682D /* LandingScreenVC.swift */; };
 		2382EA932318370C006C682D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2382EA912318370C006C682D /* Main.storyboard */; };
 		2382EA962318370C006C682D /* Favorite_Locations.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2382EA942318370C006C682D /* Favorite_Locations.xcdatamodeld */; };
 		2382EA982318370C006C682D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2382EA972318370C006C682D /* Assets.xcassets */; };
 		2382EA9B2318370C006C682D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2382EA992318370C006C682D /* LaunchScreen.storyboard */; };
 		2382EAA62318370D006C682D /* Favorite_LocationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2382EAA52318370D006C682D /* Favorite_LocationsTests.swift */; };
 		2382EAB12318370D006C682D /* Favorite_LocationsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2382EAB02318370D006C682D /* Favorite_LocationsUITests.swift */; };
+		32C2DE9322B8223D6A6A8979 /* Pods_Favorite_LocationsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2C4F7A4E325F03D6999C8D /* Pods_Favorite_LocationsUITests.framework */; };
+		49A0108399B6811DCE1B0224 /* Pods_Favorite_LocationsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 193860C5A9DB6415795721BB /* Pods_Favorite_LocationsTests.framework */; };
+		9428A402A886EF1069DD486F /* Pods_Favorite_Locations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AEAB76A704B71D5D7DAFC1C /* Pods_Favorite_Locations.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D1AE4EB3945262D8C45BD9C /* Pods-Favorite LocationsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Favorite LocationsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Favorite LocationsUITests/Pods-Favorite LocationsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		193860C5A9DB6415795721BB /* Pods_Favorite_LocationsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Favorite_LocationsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2382EA8A2318370C006C682D /* Favorite Locations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Favorite Locations.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2382EA8D2318370C006C682D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2382EA8F2318370C006C682D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2382EA8F2318370C006C682D /* LandingScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingScreenVC.swift; sourceTree = "<group>"; };
 		2382EA922318370C006C682D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2382EA952318370C006C682D /* Favorite_Locations.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Favorite_Locations.xcdatamodel; sourceTree = "<group>"; };
 		2382EA972318370C006C682D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +54,13 @@
 		2382EAAC2318370D006C682D /* Favorite LocationsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Favorite LocationsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2382EAB02318370D006C682D /* Favorite_LocationsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite_LocationsUITests.swift; sourceTree = "<group>"; };
 		2382EAB22318370D006C682D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AEAB76A704B71D5D7DAFC1C /* Pods_Favorite_Locations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Favorite_Locations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		56746E7C96791EE32A5CABE3 /* Pods-Favorite Locations.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Favorite Locations.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Favorite Locations/Pods-Favorite Locations.debug.xcconfig"; sourceTree = "<group>"; };
+		82635E754226929EBECA735D /* Pods-Favorite Locations.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Favorite Locations.release.xcconfig"; path = "Pods/Target Support Files/Pods-Favorite Locations/Pods-Favorite Locations.release.xcconfig"; sourceTree = "<group>"; };
+		89636C628B91F6586CC9717F /* Pods-Favorite LocationsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Favorite LocationsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Favorite LocationsTests/Pods-Favorite LocationsTests.release.xcconfig"; sourceTree = "<group>"; };
+		8E2986E995595319306896CC /* Pods-Favorite LocationsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Favorite LocationsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Favorite LocationsUITests/Pods-Favorite LocationsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B88A4DBD2110BA02E6897B03 /* Pods-Favorite LocationsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Favorite LocationsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Favorite LocationsTests/Pods-Favorite LocationsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EC2C4F7A4E325F03D6999C8D /* Pods_Favorite_LocationsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Favorite_LocationsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9428A402A886EF1069DD486F /* Pods_Favorite_Locations.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49A0108399B6811DCE1B0224 /* Pods_Favorite_LocationsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32C2DE9322B8223D6A6A8979 /* Pods_Favorite_LocationsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +98,8 @@
 				2382EAA42318370D006C682D /* Favorite LocationsTests */,
 				2382EAAF2318370D006C682D /* Favorite LocationsUITests */,
 				2382EA8B2318370C006C682D /* Products */,
+				E907DF1C8E5A9447195C26F2 /* Pods */,
+				B57362AD6E30E71770655058 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,7 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				2382EA8D2318370C006C682D /* AppDelegate.swift */,
-				2382EA8F2318370C006C682D /* ViewController.swift */,
+				2382EA8F2318370C006C682D /* LandingScreenVC.swift */,
 				2382EA912318370C006C682D /* Main.storyboard */,
 				2382EA972318370C006C682D /* Assets.xcassets */,
 				2382EA992318370C006C682D /* LaunchScreen.storyboard */,
@@ -128,6 +145,29 @@
 			path = "Favorite LocationsUITests";
 			sourceTree = "<group>";
 		};
+		B57362AD6E30E71770655058 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2AEAB76A704B71D5D7DAFC1C /* Pods_Favorite_Locations.framework */,
+				193860C5A9DB6415795721BB /* Pods_Favorite_LocationsTests.framework */,
+				EC2C4F7A4E325F03D6999C8D /* Pods_Favorite_LocationsUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E907DF1C8E5A9447195C26F2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				56746E7C96791EE32A5CABE3 /* Pods-Favorite Locations.debug.xcconfig */,
+				82635E754226929EBECA735D /* Pods-Favorite Locations.release.xcconfig */,
+				B88A4DBD2110BA02E6897B03 /* Pods-Favorite LocationsTests.debug.xcconfig */,
+				89636C628B91F6586CC9717F /* Pods-Favorite LocationsTests.release.xcconfig */,
+				0D1AE4EB3945262D8C45BD9C /* Pods-Favorite LocationsUITests.debug.xcconfig */,
+				8E2986E995595319306896CC /* Pods-Favorite LocationsUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +175,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2382EAB52318370D006C682D /* Build configuration list for PBXNativeTarget "Favorite Locations" */;
 			buildPhases = (
+				D0078B3594E3244651AA2762 /* [CP] Check Pods Manifest.lock */,
 				2382EA862318370C006C682D /* Sources */,
 				2382EA872318370C006C682D /* Frameworks */,
 				2382EA882318370C006C682D /* Resources */,
+				A7C7CE34166898FEDBD054B8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +194,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2382EAB82318370D006C682D /* Build configuration list for PBXNativeTarget "Favorite LocationsTests" */;
 			buildPhases = (
+				C8121133F566D3D5707C57EB /* [CP] Check Pods Manifest.lock */,
 				2382EA9D2318370C006C682D /* Sources */,
 				2382EA9E2318370C006C682D /* Frameworks */,
 				2382EA9F2318370C006C682D /* Resources */,
@@ -170,6 +213,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2382EABB2318370D006C682D /* Build configuration list for PBXNativeTarget "Favorite LocationsUITests" */;
 			buildPhases = (
+				13204846B9C7EFCE8C153A1F /* [CP] Check Pods Manifest.lock */,
 				2382EAA82318370D006C682D /* Sources */,
 				2382EAA92318370D006C682D /* Frameworks */,
 				2382EAAA2318370D006C682D /* Resources */,
@@ -254,13 +298,88 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		13204846B9C7EFCE8C153A1F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Favorite LocationsUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7C7CE34166898FEDBD054B8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Favorite Locations/Pods-Favorite Locations-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Favorite Locations/Pods-Favorite Locations-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8121133F566D3D5707C57EB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Favorite LocationsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0078B3594E3244651AA2762 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Favorite Locations-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2382EA862318370C006C682D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2382EA962318370C006C682D /* Favorite_Locations.xcdatamodeld in Sources */,
-				2382EA902318370C006C682D /* ViewController.swift in Sources */,
+				2382EA902318370C006C682D /* LandingScreenVC.swift in Sources */,
 				2382EA8E2318370C006C682D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,6 +553,7 @@
 		};
 		2382EAB62318370D006C682D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56746E7C96791EE32A5CABE3 /* Pods-Favorite Locations.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -451,6 +571,7 @@
 		};
 		2382EAB72318370D006C682D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82635E754226929EBECA735D /* Pods-Favorite Locations.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -468,6 +589,7 @@
 		};
 		2382EAB92318370D006C682D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B88A4DBD2110BA02E6897B03 /* Pods-Favorite LocationsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -488,6 +610,7 @@
 		};
 		2382EABA2318370D006C682D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89636C628B91F6586CC9717F /* Pods-Favorite LocationsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +631,7 @@
 		};
 		2382EABC2318370D006C682D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D1AE4EB3945262D8C45BD9C /* Pods-Favorite LocationsUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -527,6 +651,7 @@
 		};
 		2382EABD2318370D006C682D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E2986E995595319306896CC /* Pods-Favorite LocationsUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
