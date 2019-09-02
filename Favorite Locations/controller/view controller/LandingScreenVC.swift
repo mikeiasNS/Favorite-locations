@@ -14,9 +14,19 @@ class LandingScreenVC: UIViewController, UITableViewDataSource, UITableViewDeleg
     var suggestions: [NSDictionary]? = nil
     var locationManager: CLLocationManager?
     @IBOutlet var resultTableView: UITableView!
+    @IBOutlet var searchBar: UISearchBar!
+    private let refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if #available(iOS 10.0, *) {
+            resultTableView.refreshControl = refreshControl
+        } else {
+            resultTableView.addSubview(refreshControl)
+        }
+        
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -44,7 +54,16 @@ class LandingScreenVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         updateList(query: query)
     }
     
+    @objc func refresh() {
+        self.updateList(query: self.searchBar.text)
+    }
+    
     func updateList(query: String?) {
+        if !refreshControl.isRefreshing {
+            refreshControl.beginRefreshing()
+//            When calling refresh control to begin programmatically we have to scroll the tableview ourselves :S
+            resultTableView.setContentOffset(CGPoint(x: 0, y: -refreshControl.frame.size.height), animated: true)
+        }
         self.locationManager = CLLocationManager()
         self.locationManager?.requestWhenInUseAuthorization()
         var currentLocation: CLLocation?
@@ -56,7 +75,10 @@ class LandingScreenVC: UIViewController, UITableViewDataSource, UITableViewDeleg
             let currentLatitude = currentLocation?.coordinate.latitude
             let currentLongitude = currentLocation?.coordinate.longitude
             
-            Alamofire.request("http://autocomplete.geocoder.api.here.com/6.2/suggest.json?query=\(query ?? "")&app_id=GJExNBxZYOZ4V3w1KZQc&app_code=DD7aQwczIJTz0UwFt6HxOA&maxresults=20\(currentLocation != nil ? "&prox=\(currentLatitude!),\(currentLongitude!)" : "")").responseJSON { (response) in
+            Alamofire.request("http://autocomplete.geocoder.api.here.com/6.2/suggest.json?query=\(query?.replacingOccurrences(of: " ", with: "%20") ?? "")&app_id=GJExNBxZYOZ4V3w1KZQc&app_code=DD7aQwczIJTz0UwFt6HxOA&maxresults=20\(currentLocation != nil ? "&prox=\(currentLatitude!),\(currentLongitude!)" : "")").responseJSON { (response) in
+
+                self.refreshControl.endRefreshing()
+
                 if let json = response.result.value as? [String: AnyObject] {
                     self.suggestions = (json["suggestions"] as? [NSDictionary])?.sorted(by: { $0["distance"] as? Int ?? 0 < $1["distance"] as? Int ?? 0 })
                     self.resultTableView.reloadData()

@@ -94,6 +94,7 @@
                     <navigationItem key="navigationItem" title="Search" id="Par-XU-zI3"/>
                     <connections>
                         <outlet property="resultTableView" destination="qRR-ld-dfM" id="Em0-El-jiH"/>
+                        <outlet property="searchBar" destination="vPO-Uy-GQE" id="47b-Eu-ICu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
