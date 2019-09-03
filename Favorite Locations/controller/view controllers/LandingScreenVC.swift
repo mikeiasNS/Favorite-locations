@@ -62,6 +62,12 @@ class LandingScreenVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let detailsVC = segue.destination as? LocationDetailsVC, let location = sender as? NSDictionary {
+            detailsVC.locationDictionary = location
+        }
+    }
+    
     //    MARK: table view methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.suggestions?.count ?? 0

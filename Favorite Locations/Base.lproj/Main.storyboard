@@ -105,7 +105,7 @@
         <!--Location DetailsVC-->
         <scene sceneID="01c-ee-yRL">
             <objects>
-                <viewController id="3Bx-Sd-r9k" customClass="LocationDetailsVC" sceneMemberID="viewController">
+                <viewController id="3Bx-Sd-r9k" customClass="LocationDetailsVC" customModule="Favorite_Locations" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lyE-dc-N5V">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -153,6 +153,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rw9-eP-Gdu"/>
                     </view>
+                    <connections>
+                        <outlet property="addressLabel" destination="cgk-Xs-NxI" id="77G-Am-0oZ"/>
+                        <outlet property="distanceLabel" destination="SkC-FB-ThM" id="ip7-po-pxp"/>
+                        <outlet property="mapView" destination="3wj-k4-1Nl" id="erE-k9-t6I"/>
+                        <outlet property="postalCodeLabel" destination="QDM-54-Que" id="QdN-SA-A5P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vh5-uw-sE3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
