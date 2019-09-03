@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/mikeias/projects/Aubay/Critical TechWorks/Favorite Locations/Favorite Locations/Favorite Locations/controller/view controllers/LocationDetailsVC.swift">
+   </FileRef>
+   <FileRef
       location = "group:Favorite Locations.xcodeproj">
    </FileRef>
    <FileRef

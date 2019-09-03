@@ -28,31 +28,6 @@ class LandingScreenVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         
         refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
     }
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.suggestions?.count ?? 0
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! LocationCell
-        
-        cell.locationNameLabel?.text = suggestions?[indexPath.row]["label"] as? String
-        cell.countryCodeLabel?.text = suggestions?[indexPath.row]["countryCode"] as? String
-        cell.distanceLabel?.text = "distance: \((suggestions?[indexPath.row]["distance"] as? Int ?? 0) / 1000) km"
-        
-        return cell
-    }
-    
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchText.count >= 3 {
-            updateList(query: searchText)
-        }
-    }
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        let query = searchBar.text
-        updateList(query: query)
-    }
     
     @objc func refresh() {
         self.updateList(query: self.searchBar.text)
@@ -61,7 +36,7 @@ class LandingScreenVC: UIViewController, UITableViewDataSource, UITableViewDeleg
     func updateList(query: String?) {
         if !refreshControl.isRefreshing {
             refreshControl.beginRefreshing()
-//            When calling refresh control to begin programmatically we have to scroll the tableview ourselves :S
+            //            When calling refresh control to begin programmatically we have to scroll the tableview ourselves :S
             resultTableView.setContentOffset(CGPoint(x: 0, y: -refreshControl.frame.size.height), animated: true)
         }
         self.locationManager = CLLocationManager()
@@ -76,14 +51,45 @@ class LandingScreenVC: UIViewController, UITableViewDataSource, UITableViewDeleg
             let currentLongitude = currentLocation?.coordinate.longitude
             
             Alamofire.request("http://autocomplete.geocoder.api.here.com/6.2/suggest.json?query=\(query?.replacingOccurrences(of: " ", with: "%20") ?? "")&app_id=GJExNBxZYOZ4V3w1KZQc&app_code=DD7aQwczIJTz0UwFt6HxOA&maxresults=20\(currentLocation != nil ? "&prox=\(currentLatitude!),\(currentLongitude!)" : "")").responseJSON { (response) in
-
+                
                 self.refreshControl.endRefreshing()
-
+                
                 if let json = response.result.value as? [String: AnyObject] {
                     self.suggestions = (json["suggestions"] as? [NSDictionary])?.sorted(by: { $0["distance"] as? Int ?? 0 < $1["distance"] as? Int ?? 0 })
                     self.resultTableView.reloadData()
                 }
             }
         }
+    }
+    
+    //    MARK: table view methods
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.suggestions?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! LocationCell
+        
+        cell.locationNameLabel?.text = suggestions?[indexPath.row]["label"] as? String
+        cell.countryCodeLabel?.text = suggestions?[indexPath.row]["countryCode"] as? String
+        cell.distanceLabel?.text = "distance: \((suggestions?[indexPath.row]["distance"] as? Int ?? 0) / 1000) km"
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: Segues.locationDetailsSegue, sender: suggestions?[indexPath.row])
+    }
+    
+    //    MARK: search bar  methods
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.count >= 3 {
+            updateList(query: searchText)
+        }
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        let query = searchBar.text
+        updateList(query: query)
     }
 }

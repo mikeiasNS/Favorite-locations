@@ -95,11 +95,68 @@
                     <connections>
                         <outlet property="resultTableView" destination="qRR-ld-dfM" id="Em0-El-jiH"/>
                         <outlet property="searchBar" destination="vPO-Uy-GQE" id="47b-Eu-ICu"/>
+                        <segue destination="3Bx-Sd-r9k" kind="show" identifier="locationDetailsSegue" id="kWT-cC-6xn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="957.97101449275374" y="20.758928571428569"/>
+        </scene>
+        <!--Location DetailsVC-->
+        <scene sceneID="01c-ee-yRL">
+            <objects>
+                <viewController id="3Bx-Sd-r9k" customClass="LocationDetailsVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lyE-dc-N5V">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="3wj-k4-1Nl">
+                                <rect key="frame" x="20" y="104" width="374" height="448"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgk-Xs-NxI">
+                                <rect key="frame" x="20" y="570" width="378" height="61.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61.5" id="boM-3I-4b5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Postal code:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDM-54-Que">
+                                <rect key="frame" x="20" y="639.5" width="378" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SkC-FB-ThM">
+                                <rect key="frame" x="20" y="668.5" width="378" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cgk-Xs-NxI" firstAttribute="leading" secondItem="rw9-eP-Gdu" secondAttribute="leading" constant="20" id="4CA-pK-gAA"/>
+                            <constraint firstItem="rw9-eP-Gdu" firstAttribute="trailing" secondItem="3wj-k4-1Nl" secondAttribute="trailing" constant="20" id="8OU-yX-Ynh"/>
+                            <constraint firstItem="rw9-eP-Gdu" firstAttribute="trailing" secondItem="QDM-54-Que" secondAttribute="trailing" constant="16" id="9C2-by-c1L"/>
+                            <constraint firstItem="SkC-FB-ThM" firstAttribute="leading" secondItem="rw9-eP-Gdu" secondAttribute="leading" constant="20" id="9Zd-Au-FZc"/>
+                            <constraint firstItem="rw9-eP-Gdu" firstAttribute="trailing" secondItem="cgk-Xs-NxI" secondAttribute="trailing" constant="16" id="CZG-fZ-pEl"/>
+                            <constraint firstItem="QDM-54-Que" firstAttribute="leading" secondItem="rw9-eP-Gdu" secondAttribute="leading" constant="20" id="GDO-AV-VnM"/>
+                            <constraint firstItem="QDM-54-Que" firstAttribute="top" secondItem="cgk-Xs-NxI" secondAttribute="bottom" constant="8" id="HgU-F4-tTb"/>
+                            <constraint firstItem="3wj-k4-1Nl" firstAttribute="top" secondItem="rw9-eP-Gdu" secondAttribute="top" constant="16" id="Nv7-Uq-w3j"/>
+                            <constraint firstItem="3wj-k4-1Nl" firstAttribute="leading" secondItem="rw9-eP-Gdu" secondAttribute="leading" constant="20" id="V3c-oA-MRG"/>
+                            <constraint firstItem="cgk-Xs-NxI" firstAttribute="top" secondItem="3wj-k4-1Nl" secondAttribute="bottom" constant="18" id="joQ-lE-zrP"/>
+                            <constraint firstItem="rw9-eP-Gdu" firstAttribute="trailing" secondItem="SkC-FB-ThM" secondAttribute="trailing" constant="16" id="riS-ef-hEB"/>
+                            <constraint firstItem="3wj-k4-1Nl" firstAttribute="height" secondItem="lyE-dc-N5V" secondAttribute="height" multiplier="0.5" id="tEe-dX-YtJ"/>
+                            <constraint firstItem="SkC-FB-ThM" firstAttribute="top" secondItem="QDM-54-Que" secondAttribute="bottom" constant="8" id="ycS-H3-brQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rw9-eP-Gdu"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vh5-uw-sE3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1835" y="21"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4Fu-OW-TnV">
