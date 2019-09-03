@@ -20,6 +20,11 @@ class LocationDetailsVC: UIViewController {
     @IBOutlet var favoriteBtnLabel: UILabel!
     
     fileprivate func setupMap(_ address: String) {
+        mapView.isScrollEnabled = false
+        mapView.isZoomEnabled = false
+        mapView.isPitchEnabled = false
+        mapView.isRotateEnabled = false
+        
         let geoCoder = CLGeocoder()
         geoCoder.geocodeAddressString(address) { (placeMarks, error) in
             if let placeMark = placeMarks?.first, let location = placeMark.location {
@@ -61,8 +66,8 @@ class LocationDetailsVC: UIViewController {
             location.locationId = locationDictionary?["locationId"] as? String ?? ""
             location.address = addressLabel.text?.replacingOccurrences(of: "Address: ", with: "") ?? ""
             location.postalCode = postalCodeLabel.text?.replacingOccurrences(of: "Postal code: ", with: "") ?? ""
-            location.latitude = Int(mapView.centerCoordinate.latitude)
-            location.longitude = Int(mapView.centerCoordinate.longitude)
+            location.latitude = Double(mapView.centerCoordinate.latitude)
+            location.longitude = Double(mapView.centerCoordinate.longitude)
             try! realm.write {
                 realm.add(location)
             }
