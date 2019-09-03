@@ -18,6 +18,7 @@
 		2382EAC023186CA7006C682D /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2382EABF23186CA7006C682D /* LocationCell.swift */; };
 		2382EAC5231DCCFF006C682D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2382EAC4231DCCFF006C682D /* Constants.swift */; };
 		2382EAC7231DE8D8006C682D /* LocationDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2382EAC6231DE8D7006C682D /* LocationDetailsVC.swift */; };
+		2382EAC9231EB151006C682D /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2382EAC8231EB151006C682D /* Location.swift */; };
 		32C2DE9322B8223D6A6A8979 /* Pods_Favorite_LocationsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2C4F7A4E325F03D6999C8D /* Pods_Favorite_LocationsUITests.framework */; };
 		49A0108399B6811DCE1B0224 /* Pods_Favorite_LocationsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 193860C5A9DB6415795721BB /* Pods_Favorite_LocationsTests.framework */; };
 		9428A402A886EF1069DD486F /* Pods_Favorite_Locations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AEAB76A704B71D5D7DAFC1C /* Pods_Favorite_Locations.framework */; };
@@ -60,6 +61,7 @@
 		2382EABF23186CA7006C682D /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		2382EAC4231DCCFF006C682D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2382EAC6231DE8D7006C682D /* LocationDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocationDetailsVC.swift; path = "/Users/mikeias/projects/Aubay/Critical TechWorks/Favorite Locations/Favorite Locations/Favorite Locations/controller/view controllers/LocationDetailsVC.swift"; sourceTree = "<absolute>"; };
+		2382EAC8231EB151006C682D /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		2AEAB76A704B71D5D7DAFC1C /* Pods_Favorite_Locations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Favorite_Locations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56746E7C96791EE32A5CABE3 /* Pods-Favorite Locations.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Favorite Locations.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Favorite Locations/Pods-Favorite Locations.debug.xcconfig"; sourceTree = "<group>"; };
 		82635E754226929EBECA735D /* Pods-Favorite Locations.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Favorite Locations.release.xcconfig"; path = "Pods/Target Support Files/Pods-Favorite Locations/Pods-Favorite Locations.release.xcconfig"; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				2382EAC4231DCCFF006C682D /* Constants.swift */,
+				2382EAC8231EB151006C682D /* Location.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -366,10 +369,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Favorite Locations/Pods-Favorite Locations-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -425,6 +432,7 @@
 				2382EA902318370C006C682D /* LandingScreenVC.swift in Sources */,
 				2382EAC023186CA7006C682D /* LocationCell.swift in Sources */,
 				2382EA8E2318370C006C682D /* AppDelegate.swift in Sources */,
+				2382EAC9231EB151006C682D /* Location.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
